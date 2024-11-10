@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Расчет соотношения матрица-наполнитель</title>
+    <style>
+        body {
+            background-color: #1c1c1c; 
+            color: #ffffff; 
+            font-family: monospace, sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            color: #52afc8; 
+        }
+        fieldset {
+            border: 2px solid #52afc8; 
+            padding: 15px;
+            margin-bottom: 20px;
+            background-color: #282828; 
+        }
+        legend {
+            padding: 5px;
+            font-weight: bold;
+        }
+        label {
+            display: block;
+            margin: 10px 0 5px;
+        }
+        input[type="text"] {
+            padding: 8px;
+            width: calc(100% - 16px); 
+            border: 1px solid #52afc8; 
+            background-color: #444444; 
+            color: #ffffff; 
+        }
+        input[type="submit"], input[type="reset"], button {
+            background-color: #52afc8; 
+            color: #ffffff; 
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+            transition: background-color 0.3s;
+        }
+        input[type="submit"]:hover, input[type="reset"]:hover, button:hover {
+            background-color: #82b532; 
+        }
+        footer {
+            margin-top: 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Расчет соотношения матрица-наполнитель</h1>
+    <form action="" method="post">
+        <fieldset>
+            <legend>Введите параметры</legend>
+            <p>
+                <label for="Плотность">Плотность:</label>
+                <input type="text" name="Плотность" required>
+            </p>
+            <p>
+                <label for="Количество отвердителя">Количество отвердителя:</label>
+                <input type="text" name="Количество отвердителя" required>
+            </p>
+            <p>
+                <label for="Содержание эпоксидных групп">Содержание эпоксидных групп:</label>
+                <input type="text" name="Содержание эпоксидных групп" required>
+            </p>
+            <p>
+                <label for="Температура вспышки">Температура вспышки:</label>
+                <input type="text" name="Температура вспышки" required>
+            </p>
+            <p>
+                <label for="Модуль упругости при растяжении">Модуль упругости при растяжении:</label>
+                <input type="text" name="Модуль упругости при растяжении" required>
+            </p>
+            <p>
+                <label for="Потребление смолы">Потребление смолы:</label>
+                <input type="text" name="Потребление смолы" required>
+            </p>
+            <p>
+                <label for="Плотность нашивки">Плотность нашивки:</label>
+                <input type="text" name="Плотность нашивки" required>
+            </p>
+        </fieldset>
+        <p>
+            <input type="submit" value="Рассчитать">
+            <input type="reset">
+        </p>
+    </form>
+    <p>
+    {% if message %}
+        <p><b>{{message}}</b></p>
+    {% endif %}
+    </p>
+</body>
+<footer>
+    <p>
+        <a href="{{url_for('metod')}}"><button>Вернуться на главную страницу</button></a>
+    </p>
+</footer>
+</html>

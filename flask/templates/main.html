@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Прогнозирование соотношения "матрица-наполнитель" для композиционных материалов</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: sans-serif;
+            background-color: #121212; 
+            color: white; 
+        }
+        
+    
+        header {
+            font-family: monospace;
+            background-color: #1e1e1e; 
+            padding: 30px;
+            text-align: center;
+            font-size: 30px;
+            color: white;
+        }
+        
+        
+        nav {
+            float: right; 
+            width: 50%;
+            background: #282828; 
+            padding: 50px;
+            color: white;
+        }
+        
+        
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        
+        article {
+            float: left;
+            padding: 20px;
+            width: 70%;
+            background-color: #1e1e1e; 
+            height: auto; 
+            font-size: 15px;
+            color: white;
+        }
+        
+        
+        section::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+        
+        
+        footer {
+            background-color: #1e1e1e; 
+            padding: 10px;
+            text-align: center;
+            color: white;
+        }
+        
+        
+        @media (max-width: 600px) {
+            nav, article {
+                width: 100%;
+                height: auto;
+            }
+        }
+
+       
+        button {
+            background-color: #52afc8; 
+            color: white; 
+            border: none; 
+            border-radius: 5px;
+            padding: 10px 20px; 
+            cursor: pointer; 
+            transition: background-color 0.3s ease; 
+        }
+        
+        button:hover {
+            background-color: #82b532; 
+        }
+        
+        a {
+            color: white; 
+            text-decoration: none; 
+        }
+
+        a:hover {
+            text-decoration: underline; 
+        }
+    </style>
+</head>
+<body>    
+    <header>
+        <h2>Прогнозирование соотношения "матрица-наполнитель" для композиционных материалов</h2>
+    </header>
+    
+    <section>
+        <nav>
+            <ul>
+                <li><a href="{{url_for('prediction')}}">
+                    <button>Прогнозирование</button>
+                </a></li>
+            </ul>
+        </nav>
+        
+        <article>
+            <h1></h1>
+            <p>Композиционные материалы — это искусственно созданные материалы, состоящие из нескольких других с четкой границей между ними.
+                Композиты обладают теми свойствами, которые не наблюдаются у компонентов по отдельности. 
+                При этом композиты являются монолитным материалом, т. е. компоненты материала неотделимы друг от друга без разрушения конструкции в целом. </p>
+            <p>В данном веб-приложении можно спрогнозировать
+                соотношение Матрица-наполнитель, на основе
+                введенных пользователем значений.
+            </p>
+        </article>
+    </section>
+
+    <footer>
+        <p></p>
+    </footer>
+</body>
+</html>
